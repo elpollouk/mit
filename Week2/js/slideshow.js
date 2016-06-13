@@ -7,6 +7,8 @@ var imagePaths = [
     "images/SrvAndShip.jpg"
 ];
 
+var currentImage = 0;
+
 function setImage(index) {
     viewerImg.src = imagePaths[index];
 }
@@ -14,5 +16,15 @@ function setImage(index) {
 function main() {
     console.log("Hello World!");
 
-    setImage(0);
+    setImage(currentImage);
+}
+
+function previousButtonClicked() {
+    currentImage--;
+    setImage(currentImage);
+}
+
+function nextButtonClicked() {
+    currentImage++;
+    setImage(currentImage);
 }
