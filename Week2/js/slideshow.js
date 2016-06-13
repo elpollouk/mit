@@ -13,6 +13,16 @@ function setImage(index) {
     viewerImg.src = imagePaths[index];
 }
 
+function advanceSlide(offset) {
+    var nextImage = currentImage + offset;
+    if (nextImage < 0 || nextImage >= imagePaths.length) {
+        return;
+    }
+
+    currentImage = nextImage;
+    setImage(currentImage);
+}
+
 function main() {
     console.log("Hello World!");
 
@@ -20,11 +30,9 @@ function main() {
 }
 
 function previousButtonClicked() {
-    currentImage--;
-    setImage(currentImage);
+    advanceSlide(-1);
 }
 
 function nextButtonClicked() {
-    currentImage++;
-    setImage(currentImage);
+    advanceSlide(1);
 }
