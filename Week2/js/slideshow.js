@@ -1,26 +1,26 @@
-var imagePaths = [
-    "images/Docked.jpg",
-    "images/EarlyMorning.jpg",
-    "images/EuropaVista.jpg",
-    "images/NightTimeLanding.jpg",
-    "images/Srv.jpg",
-    "images/SrvAndShip.jpg"
+var imageDetails = [
+    { path:"images/Docked.jpg", caption:"Cobra docked at an orbital outpost" },
+    { path:"images/EarlyMorning.jpg", caption:"Early morning above Europe" },
+    { path:"images/EuropaVista.jpg", caption:"Looking out over the canyons of Europa" },
+    { path:"images/NightTimeLanding.jpg", caption:"A night time excursion" },
+    { path:"images/Srv.jpg", caption:"Joy riding in my SRV" },
+    { path:"images/SrvAndShip.jpg", caption:"Exploring a remote planetary landscape" }
 ];
 
 var currentImage = 0;
 
 function setImage(index) {
-    viewerImg.src = imagePaths[index];
+    viewerImg.src = imageDetails[index].path;
     var caption = document.querySelector(".viewer .caption");
-    caption.innerText = `Slide ${index+1}/${imagePaths.length}`;
+    caption.innerText = imageDetails[index].caption;
 }
 
 function advanceSlide(offset) {
     var nextImage = currentImage + offset;
     if (nextImage < 0) {
-        nextImage = imagePaths.length - 1;
+        nextImage = imageDetails.length - 1;
     }
-    else if (nextImage >= imagePaths.length) {
+    else if (nextImage >= imageDetails.length) {
         nextImage = 0;
     }
 
