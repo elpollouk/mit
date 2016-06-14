@@ -10,11 +10,22 @@ h1 {
 }
 
 #viewerImg {
-    width: 75%;
+    width: 100%;
 }
 
 .viewer {
+    position: relative;
     text-align: center;
+    width: 75%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.viewer .controls {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    width: 100%;
 }
 
 .viewer .button {
@@ -27,8 +38,10 @@ h1 {
 
 .viewer .button.previous {
     background-image: url(../images/previous.png);
+    float: left;
 }
 
 .viewer .button.next {
     background-image: url(../images/next.png);
+    float: right;
 }
