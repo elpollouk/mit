@@ -11,6 +11,8 @@ var currentImage = 0;
 
 function setImage(index) {
     viewerImg.src = imagePaths[index];
+    var caption = document.querySelector(".viewer .caption");
+    caption.innerText = `Slide ${index+1}/${imagePaths.length}`;
 }
 
 function advanceSlide(offset) {

@@ -53,3 +53,15 @@ h1 {
     background-image: url(../images/next.png);
     float: right;
 }
+
+.viewer .caption {
+    position: relative;
+    width: 100%;
+    height: 32px;
+    top: -32px;
+    background-color: rgba(127, 127, 127, 0.5);
+
+    font-family: "arial";
+    padding-top: 8px;
+    box-sizing: border-box;
+}
