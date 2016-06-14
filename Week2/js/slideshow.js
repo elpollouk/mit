@@ -15,8 +15,11 @@ function setImage(index) {
 
 function advanceSlide(offset) {
     var nextImage = currentImage + offset;
-    if (nextImage < 0 || nextImage >= imagePaths.length) {
-        return;
+    if (nextImage < 0) {
+        nextImage = imagePaths.length - 1;
+    }
+    else if (nextImage >= imagePaths.length) {
+        nextImage = 0;
     }
 
     currentImage = nextImage;
