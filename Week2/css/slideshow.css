@@ -36,6 +36,14 @@ h1 {
     background-size: cover;
 }
 
+.viewer .button:hover {
+    background-color: rgba(192, 192, 192, 0.7);
+}
+
+.viewer .button:active {
+    background-color: rgb(127, 127, 192);
+}
+
 .viewer .button.previous {
     background-image: url(../images/previous.png);
     float: left;
