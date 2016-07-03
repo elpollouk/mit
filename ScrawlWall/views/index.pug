@@ -1,0 +1,18 @@
+mixin renderMessage(message)
+	div.message
+		span.time #{message.date.getHours()}:#{("0" + message.date.getMinutes()).substr(-2)}
+		span  - 
+		span.text= message.text
+
+html
+	head
+		title Scrawl Wall
+	body
+		h1= message
+		div
+			for message in messages
+				+renderMessage(message)
+		div
+			form(method='post' action='/')
+				input(name='message' type='text')
+				input(type='submit' value="Send")
